@@ -1,0 +1,126 @@
+@use "../../sass/colors";
+
+.article {
+  min-height: 140px;
+  width: 100%;
+  padding: 15px 19px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$background-base;
+  border-radius: 2px;
+
+  &__header {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: colors.$primary;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__profile {
+    margin-left: auto;
+  }
+
+  &__shortDescription {
+    font-size: 1.2rem;
+    color: colors.$text;
+    margin-top: auto;
+  }
+}
+
+.likes {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  &__image {
+    $size: 16px;
+    width: $size;
+    height: $size;
+
+    background-image: url(../../assets/img/like.svg);
+    background-position: center;
+    background-size: cover;
+
+    &_active {
+      background-image: url(../../assets/img/like--active.svg);
+    }
+
+    &_noAuth {
+      cursor: url(../../assets/img/like--active.svg), pointer;
+    }
+  }
+
+  &__count {
+    font-size: 1.2rem;
+  }
+}
+
+.profile {
+  display: flex;
+  column-gap: 10px;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 2px;
+  }
+
+  &__username {
+    font-size: 1.8rem;
+    color: colors.$heading;
+  }
+
+  &__created {
+    font-size: 1.2rem;
+    color: colors.$text-secondary;
+  }
+
+  &__avatar {
+    $avatar-height: 46px;
+    width: $avatar-height;
+    height: $avatar-height;
+    border-radius: 50%;
+  }
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleLikesWrapper {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  column-gap: 2px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.tag {
+  min-height: 20px;
+  padding: 0 6px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid colors.$text-secondary;
+
+  font-size: 1.2rem;
+  border-radius: 2px;
+  text-transform: capitalize;
+}

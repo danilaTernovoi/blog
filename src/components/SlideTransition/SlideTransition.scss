@@ -1,0 +1,13 @@
+.enter,
+.exit {
+  opacity: 0;
+  transform: translateY(50px);
+  transition-property: transform opacity;
+  transition-duration: 0.25s;
+}
+
+.enter-active,
+.leave-active {
+  opacity: 1;
+  transform: translateY(0);
+}
